@@ -5,7 +5,9 @@ body {
   padding: 0;
 }
 
-
+a { 
+   color: #3498DB;
+}
 
 body {
    margin: 0;
@@ -17,17 +19,21 @@ body {
    overflow: hidden;
  }
 
- h1, h5, p {
-   font-family: "Atkinson Hyperlegible", sans-serif;
-}
  
  h1  {
+   font-family: "Atkinson Hyperlegible", sans-serif;
    text-transform: uppercase;
    letter-spacing: 2px;
    font-size: 45px;
    font-weight: 800;
  }
  
+ p, body{
+   font-family: "Varela Round", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+
+ }
 
 .weather-app {
    background-color: rgba(255, 255, 255, 0.447);
@@ -35,5 +41,34 @@ body {
    margin: 30px auto;
    padding: 30px;
    border-radius: 35px;
-   box-shadow: 0 30px 50px rgba(75, 75, 75, 0.338);
+   box-shadow: 0 30px 50px rgba(75, 75, 75, 0.184);
+}
+
+.search-form-input {
+   background-color: rgba(255, 255, 255, 0.904);
+   border: none;
+   border-radius: 30px;
+   width: 80%;
+   padding: 10px 20px;
+
+}
+
+.search-form-button {
+   background-color: #3498DB;
+   color: white;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 30px;
+   margin-left: 10px;
+   font-size: 16px;
+
+} 
+
+footer {
+   border-top: 1px solid rgba(132, 132, 132, 0.231);
+   padding: 30px 0 0 0 ;
+   text-align: center;
+   font-size: 12px;
+   color: rgba(0 0 0 0.6);
+
 }
