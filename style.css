@@ -154,7 +154,7 @@ main {
  
 
  .weather-forecast-icon {
-   font-size: 38px;
+   width: 100%;
    text-align: center;
  }
  
