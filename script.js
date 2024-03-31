@@ -1,3 +1,5 @@
+/* WEATHER SEARCH FUNCTION */
+
 function refreshWeather(response) {
    let temperatureElement = document.querySelector("#temperature");
    let temperature = response.data.temperature.current;
@@ -19,6 +21,7 @@ function refreshWeather(response) {
    temperatureElement.innerHTML = Math.round(temperature);
  }
 
+ /* WEATHER TIME & DATE FUNCTION */
 
 function formatDate (date) {
    let minutes = date.getMinutes()
@@ -44,6 +47,7 @@ function formatDate (date) {
 
 }
 
+ /* WEATHER API QUERY */
  
 function searchCity(city) {
    let apiKey = "2f103acf4b4o772b9dbdd6c4e500840t";
@@ -58,7 +62,46 @@ function handleSearchSubmit(event) {
    searchCity(searchInput.value);
 }
 
+ /* 5 DAY WEATHER FORECAST FUNCTION */
+
+ function displayForecast() {
+
+   let forecastElement = document.querySelector("#forecast");
+
+   let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+   let forecastHtml = "";
+
+   days.forEach(function (day) {
+      forecastHtml = 
+         forecastHtml + 
+      `
+      <div class="weather-forecast-day">
+      <div class="weather-forecast-date">${day}</div>
+      <div class="weather-forecast-icon">🌤️</div>
+      <div class="weather-forecast-temperatures">
+      <div class="weather-forecast-temperature">
+         <strong>15º</strong>
+      </div>
+      <div class="weather-forecast-temperature">10º</div>
+      </div>
+   </div>
+   `;
+   });
+   forecastElement.innerHTML = forecastHtml;
+}
+
+
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-
 searchCity("London");
+displayForecast();
+
+
+
+
+
+
+
+
