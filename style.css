@@ -186,6 +186,7 @@ margin-right: 30px;
 .weather-app-icon {
    width: 100px;
    height: 100px;
+
    font-family: sans-serif;
    margin-top: 0px;
    margin-left: 10px;
@@ -234,10 +235,18 @@ margin-right: 30px;
  
 
  .weather-forecast-icon {
-   width: 100%;
+   max-width: 100%; /* Limit the width to prevent spillover */
    text-align: center;
- }
- 
+}
+
+/* CSS for mobile screens */
+@media only screen and (max-width: 600px) {
+   .weather-forecast-icon {
+      max-height: 60px; /* Limit the height to prevent spillover on mobile screens */
+      width: auto; /* Maintain the width as 100% to preserve the icon ratio */
+   }
+}
+
  .weather-forecast-temperatures {
    text-align: center;
    color: #303642;
