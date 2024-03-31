@@ -42,7 +42,7 @@ body {
 @media only screen and (max-width: 600px) {
    .weather-app {
       max-width: 90%; /* Adjust max-width for smaller screens */
-      margin: 120px auto 0; /* Adjust margin */
+      margin: 100px auto 0; /* Adjust margin */
       padding: 30px 5px; /* Adjust padding */
       border-radius: 20px;
       box-shadow: 0 15px 25px rgba(75, 75, 75, 0.184); 
