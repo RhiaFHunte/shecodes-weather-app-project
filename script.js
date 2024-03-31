@@ -11,7 +11,7 @@ function refreshWeather(response) {
    let iconElement = document.querySelector("#icon");
    let bodyElement = document.querySelector("body");
 
-/* ADJUST BG COLOUR ACCORDING TO TEMP */
+   /* ADJUST BG COLOUR ACCORDING TO TEMP */
    if (temperature < 10) {
       bodyElement.style.background = "linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%)";
    } else if (temperature >= 10 && temperature < 15) {
@@ -21,8 +21,7 @@ function refreshWeather(response) {
    } else if (temperature >= 25) {
       bodyElement.style.background = "linear-gradient(109.6deg, rgb(255, 230, 109) 11.2%, rgb(87, 232, 107) 100.2%)";
    } else {
-
-/* DEFAULT BG COLOUR IF TEMP IS UNAVAILABLE*/
+      /* DEFAULT BG COLOUR IF TEMP IS UNAVAILABLE*/
       bodyElement.style.background = "radial-gradient(circle at 12.3% 19.3%, rgba(85, 87, 218, 0.677) 0%, rgb(95, 209, 249) 100.2%)";
    }
 
@@ -36,7 +35,6 @@ function refreshWeather(response) {
 
    getForecast(response.data.city);
 }
-
 
  /* WEATHER TIME & DATE FUNCTION */
 function formatDate (date) {
@@ -130,19 +128,8 @@ function getForecast(city) {
    forecastElement.innerHTML = forecastHtml;
 }
 
-
  /* CALL THE FUNCTIONS */
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
 searchCity("London");
-
-
-
-
-
-
-
-
-
-
