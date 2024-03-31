@@ -121,17 +121,39 @@ main {
       text-align: center;
       flex-direction: column; /* Stack elements vertically */
       align-items: center; /* Center elements horizontally */
+      margin: 0 !important;
    }
+
+
+   .weather-app-details {
+      font-size: 16px;
+      line-height: 10px;
+      margin-left: 0 !important;
+  }
 
    .weather-app-temperature-container {
       order: -1; /* Move temperature container above details */
-      margin-bottom: 10px; /* Add spacing between temperature and details */
+      margin-bottom: 0; /* Remove spacing between temperature and details */
+
    }
 
-   /* Override margin-left for mobile screens */
-   .weather-app-details {
-      margin-left: 0;
+
+  .weather-app-temperature {
+   font-size: 60px;
+   font-family: sans-serif;
+   font-weight: 600;
+   line-height: 80px;
+   margin: 0; /* Reset margin */
    }
+
+   .weather-app-icon {
+      width: 80px;
+      height: 80px;
+      font-family: sans-serif;
+      margin-top: 0px;
+      margin-left: 0px;
+   }
+  
 }
 
 
