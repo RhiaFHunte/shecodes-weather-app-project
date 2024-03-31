@@ -91,6 +91,13 @@ main {
    height: fit-content;
    
 }
+
+@media only screen and (max-width: 600px) {
+   main {
+      padding: 0 30px; /* Adjust padding to 30px on mobile screens */
+   }
+}
+
 .weather-app-city h1, h2{
    text-align: center;
 }
@@ -107,9 +114,33 @@ main {
    display: flex;
    justify-content: space-between;
 }
+
+/* CSS for mobile screens */
+@media only screen and (max-width: 600px) {
+   .weather-app-data {
+      text-align: center;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center elements horizontally */
+   }
+
+   .weather-app-temperature-container {
+      order: -1; /* Move temperature container above details */
+      margin-bottom: 10px; /* Add spacing between temperature and details */
+   }
+
+   /* Override margin-left for mobile screens */
+   .weather-app-details {
+      margin-left: 0;
+   }
+}
+
+
 .weather-app-details {
    font-size: 16px;
-   line-height: 22px;
+   line-height: 22px;  
+   margin-left: 30px; /* Default margin-left for desktop */
+
+
 
 }
 .weather-app-details strong{
@@ -123,7 +154,13 @@ main {
    font-family: sans-serif;
    font-weight: 600;
    line-height: 100px;
+
 }
+
+ .weather-app-temperature-unit {
+margin-right: 30px;
+}
+
 .weather-app-icon {
    width: 100px;
    height: 100px;
@@ -148,17 +185,17 @@ main {
    display: flex;
  }
  
- .col-2 {
-   flex: 1;
-   padding: 0 15px; /* Optional: Add spacing between columns */
 
- }
+.col-2 {
+   flex: 1;
+   padding: 0 15px; /* Add spacing between columns */
+}
+
 
  .weather-forecast-date {
    text-align: center;
    color: rgba(39, 33, 66, 0.664);
    font-size: 16px;
-
    margin-bottom: 10px;
  }
  
